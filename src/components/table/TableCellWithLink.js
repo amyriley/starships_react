@@ -1,19 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import Button from "@material-ui/core/Button";
+
 const TableCellWithLink = props => {
   return (
     <td>
-      <Link
-        to={{
-          pathname: "/more-details",
-          state: {
-            starship: props.starship
-          }
-        }}
-      >
-        See More
-      </Link>
+      <Button variant="contained" color="#263238">
+        <Link
+          to={{
+            pathname: `/more-details/${props.starship.name}`,
+            state: {
+              starship: props.starship
+            }
+          }}
+          style={{ textDecoration: "none", fontSize: 10, color: "black" }}
+        >
+          More Details
+        </Link>
+      </Button>
     </td>
   );
 };

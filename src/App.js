@@ -9,12 +9,15 @@ export default class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="App">
+        <div className="App container">
           <Switch>
             <Route path="/" exact>
               <StarshipOverviewContainer />
             </Route>
-            <Route path="/more-details" component={MoreDetailsPage}></Route>
+            <Route
+              path="/more-details/:starshipName"
+              component={MoreDetailsPage}
+            ></Route>
           </Switch>
         </div>
       </BrowserRouter>

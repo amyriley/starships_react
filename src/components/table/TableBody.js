@@ -1,16 +1,18 @@
 import React from "react";
-import TableRow from "./TableRow";
+import OverviewTableRow from "./OverviewTableRow";
+
+import TableBody from "@material-ui/core/TableBody";
 
 const uuid = require("uuid/v4");
 
-const TableBody = props => {
+const TBody = props => {
   return (
-    <tbody>
+    <TableBody>
       {props.starships.map(starship => (
-        <TableRow key={uuid()} starship={starship} />
+        <OverviewTableRow key={uuid()} starship={starship} />
       ))}
-    </tbody>
+    </TableBody>
   );
 };
 
-export default TableBody;
+export default TBody;

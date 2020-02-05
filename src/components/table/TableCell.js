@@ -1,7 +1,9 @@
 import React from "react";
 
-const TableCell = props => {
-  return <td>{props.value}</td>;
+import TableCell from "@material-ui/core/TableCell";
+
+const Cell = props => {
+  return <TableCell>{props.value}</TableCell>;
 };
 
-export default TableCell;
+export default Cell;
