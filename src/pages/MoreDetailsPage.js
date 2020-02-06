@@ -56,7 +56,7 @@ const MoreDetailsPage = props => {
       <Table className={classes.table}>
         <MoreDetailsTable moreDetails={moreDetails} />
       </Table>
-      <Button href="/" variant="contained" color="#263238">
+      <Button href="/" variant="contained" style={{ fontSize: 10 }}>
         Back
       </Button>
     </Container>

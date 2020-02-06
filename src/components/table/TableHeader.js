@@ -1,14 +1,22 @@
 import React from "react";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
+import TableCell from "@material-ui/core/TableCell";
 
 const TableHeader = props => {
   return (
-    <thead>
-      <tr>
+    <TableHead>
+      <TableRow>
         {props.headers.map(header => (
-          <th key={header}>{header}</th>
+          <TableCell
+            style={{ color: "white", fontWeight: "bold", letterSpacing: 2 }}
+            key={header}
+          >
+            {header}
+          </TableCell>
         ))}
-      </tr>
-    </thead>
+      </TableRow>
+    </TableHead>
   );
 };
 

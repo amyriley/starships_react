@@ -6,7 +6,7 @@ import Button from "@material-ui/core/Button";
 const TableCellWithLink = props => {
   return (
     <td>
-      <Button variant="contained" color="#263238">
+      <Button variant="contained">
         <Link
           to={{
             pathname: `/more-details/${props.starship.name}`,
